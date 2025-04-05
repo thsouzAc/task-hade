@@ -17,40 +17,43 @@ body {
   display: flex;
   margin-bottom: 1px;
 }
+
 .conteiner {
   text-align: center;
   padding: 2em;
 }
 .app-title {
   text-align: center;
-  font-size: 3rem;
-  font-weight: 800;
-  background: linear-gradient(to right, #4F46E5, #22D3EE);
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: -10px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #8196ad, #fcfcfc);
+  background-clip: text;              
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 3rem;
 }
-.app-title:hover {
-  color: #022f35;
-  text-shadow: 0 0 8px #0193a7;
-}
+
+
+
 .column {
-  margin-top: 6em;
-  background-color: #0A0F1A;
+  margin-top: 1em;
+  background-color: #060f24;
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 15px;
   width: 1500px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-
 .column h2 {
   margin: 0;
   font-size: 1.2rem;
   color: #ccc;
   text-align: center;
-  border-bottom: 1px solid #444;
   padding-bottom: 0.5rem;
 }
 
@@ -61,7 +64,7 @@ body {
 }
 
 .card {
-  background-color: #111827;
+  background-color: #1a253d;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 0 8px #111827;
@@ -82,7 +85,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   margin-top: 0.5rem;
   transition: background 0.3s ease;
   justify-content: center;

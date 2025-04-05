@@ -10,27 +10,27 @@ function App() {
       <div className="board">
         <div className="column">
           <h2>A Fazer</h2>
-          <button className='add-btn'>
-            <Plus size = {18} />
-          </button>
           <div className="card">Tarefa 1</div>
           <div className="card">Tarefa 2</div>
+          <button className='add-btn'>
+            <Plus size = {20} /> Adicionar Tarefa
+          </button>
         </div>
 
         <div className="column">
           <h2>Em Andamento</h2>
-          <button className='add-btn'>
-            <Plus size = {18} />
-          </button>
           <div className="card">Tarefa 3</div>
+          <button className='add-btn'>
+            <Plus size = {20} /> Adicionar Tarefa
+          </button>
         </div>
 
         <div className="column">
           <h2>Concluído</h2>
-          <button className='add-btn'>
-            <Plus size = {18} />
-          </button>
           <div className="card">Tarefa 4</div>
+          <button className='add-btn'>
+            <Plus size = {20} /> Adicionar Tarefa
+          </button>
         </div>
       </div>
     </div>
