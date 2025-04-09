@@ -1,84 +1,20 @@
 import './index.css';
 import { Plus, Trash } from 'lucide-react';
-import { useState } from 'react';
-
-type Task = {
-  id: string;
-  content: string;
-};
-
-type List = {
-  id: string;
-  title: string;
-  tasks: Task[];
-};
+import { useTaskActions } from './hooks/useTaskActions';
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
-  const [selectedListId, setSelectedListId] = useState<string | null>(null);
-  const [newTaskContent, setNewTaskContent] = useState<string>('');
-
-  const [lists, setLists] = useState<List[]>([
-    {
-      id: 'todo',
-      title: 'A Fazer',
-      tasks: [
-        { id: '1', content: 'Estudar React' },
-        { id: '2', content: 'Ler Documentação' }
-      ],
-    },
-    {
-      id: 'doing',
-      title: 'Em Andamento',
-      tasks: [
-        { id: '3', content: 'Estudar Inglês' }
-      ],
-    },
-    {
-      id: 'done',
-      title: 'Concluído',
-      tasks: [
-        { id: '4', content: 'Aprender Docker' },
-        { id: '5', content: 'Aprender ExpressJs' }
-      ],
-    },
-  ]);
-
-  const handleAddTask = (listId: string) => {
-    if (!newTaskContent.trim()) return;
-
-    const newTask: Task = {
-      id: crypto.randomUUID(),
-      content: newTaskContent,
-    };
-
-    setLists(prevLists =>
-      prevLists.map(list =>
-        list.id === listId
-          ? { ...list, tasks: [...list.tasks, newTask] }
-          : list
-      )
-    );
-
-    setNewTaskContent('');
-    setShowModal(false);
-    setSelectedListId(null);
-  };
-
-  const handleRemoveTask = (listId: string, taskId: string) => {
-    setLists(prevLists =>
-      prevLists.map(list =>
-        list.id === listId
-          ? { ...list, tasks: list.tasks.filter(task => task.id !== taskId) }
-          : list
-      )
-    );
-  };
-
-  const openModal = (listId: string) => {
-    setSelectedListId(listId);
-    setShowModal(true);
-  };
+  
+  const {
+    lists,
+    newTaskContent,
+    setNewTaskContent,
+    showModal,
+    selectedListId,
+    handleAddTask,
+    handleRemoveTask,
+    openModal,
+    setShowModal,
+  } = useTaskActions();
 
   return (
     <div className="container">
