@@ -18,8 +18,6 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className="app-title">Task Hade</h1>
-
       <div className="board">
         {lists.map((list) => (
           <div className="column" key={list.id}>
