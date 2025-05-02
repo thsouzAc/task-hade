@@ -2,10 +2,6 @@
 
 Uma plataforma estilo Trello feita com React + Vite, basicamente um clone simplificado do Trello para organização de tarefas com quadros, listas e cartões. Desenvolvido para fins de aprendizado e prática com React, Vite e gerenciamento de estado moderno.
 
-# 🎯 **Objetivo**
-
-Esse projeto tem como objetivo estudar e aplicar conceitos de desenvolvimento full-stack (por enqanto somente o front) moderno com React e Vite, além de praticar componentes reutilizáveis, gerenciamento de estado e UX.
-
 
 # 🧠 **Funcionalidades planejadas**
 
@@ -18,10 +14,6 @@ Esse projeto tem como objetivo estudar e aplicar conceitos de desenvolvimento fu
 - Edição de títulos de listas e cartões
 
 - Responsividade
-
-- Autenticação 
-
-- Backend 
 
 # **💻 Como rodar o projeto**
 
